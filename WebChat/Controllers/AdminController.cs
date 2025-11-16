@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebChat.Models;
 using WebChat.Services;
 using WebChat.Tools;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebChat.Controllers
 {
@@ -23,6 +24,7 @@ namespace WebChat.Controllers
             this.adminservice = adminservice;
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreateBusines(BusinessADD model)
         {
@@ -47,7 +49,7 @@ namespace WebChat.Controllers
                 });
             }
         }
-
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> ListBussines()
         {
@@ -73,6 +75,7 @@ namespace WebChat.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetBusine(int id)
         {
@@ -98,6 +101,7 @@ namespace WebChat.Controllers
             }
         }
 
+        [Authorize]
         [HttpPut("{id:int}")]
         public async Task<IActionResult> UpdateBusiens(int id, BusinessADD model)
         {
@@ -123,6 +127,7 @@ namespace WebChat.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetRoles()
         {
@@ -148,6 +153,7 @@ namespace WebChat.Controllers
             }
         }
 
+        [Authorize]
         [HttpPut("{id:int}")]
         public async Task<IActionResult> UpdateRole(int id, RoleAdd model)
         {
@@ -173,6 +179,7 @@ namespace WebChat.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreateRole(RoleAdd model)
         {
@@ -198,6 +205,7 @@ namespace WebChat.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreateArea(AreaBusinessAdd model)
         {
@@ -223,6 +231,7 @@ namespace WebChat.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet("{businessId:int}")]
         public async Task<IActionResult> GetAreas(int businessId)
         {
@@ -248,6 +257,7 @@ namespace WebChat.Controllers
             }
         }
 
+        [Authorize]
         [HttpPut("{id:int}")]
         public async Task<IActionResult> UpdateArea(int id, AreaBusinessAdd model)
         {

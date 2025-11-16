@@ -171,3 +171,4 @@ C:\Users\pablo\source\repos\WebChat\WebChat\obj\Debug\net8.0\WebChat.pdb
 C:\Users\pablo\source\repos\WebChat\WebChat\obj\Debug\net8.0\WebChat.genruntimeconfig.cache
 C:\Users\pablo\source\repos\WebChat\WebChat\obj\Debug\net8.0\ref\WebChat.dll
 C:\Users\pablo\source\repos\WebChat\WebChat\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\pablo\source\repos\WebChat\WebChat\obj\Debug\net8.0\WebChat.sourcelink.json

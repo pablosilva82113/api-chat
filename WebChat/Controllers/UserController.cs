@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebChat.Models;
 using WebChat.Services;
@@ -24,6 +25,7 @@ namespace WebChat.Controllers
             this.userService = userService;
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreateUser(EmployeeAdd model)
         {
@@ -49,6 +51,7 @@ namespace WebChat.Controllers
                 });
             }
         }
+        [Authorize]
         [HttpGet("{businessId:int}")]
         public async Task<IActionResult> GetUsersByBusiness(int businessId)
         {
@@ -76,6 +79,8 @@ namespace WebChat.Controllers
             }
            
         }
+
+        [Authorize]
         [HttpGet("{id:int}")]
         public async Task<IActionResult>GetUserById(int id)
         {

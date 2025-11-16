@@ -76,7 +76,6 @@ namespace WebChat.Services
                 }
                 return dataResponse;
             }
-
             public async Task<Response> RestorePassword(LoginModel model)
             {
                 try

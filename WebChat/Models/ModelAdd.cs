@@ -7,6 +7,13 @@ namespace WebChat.Models
     {
     }
 
+    public class RevokedToken
+    {
+        public int Id { get; set; }
+        public string Token { get; set; } = string.Empty;
+        public DateTime RevokedAt { get; set; } = DateTime.UtcNow;
+    }
+
     public class BusinessADD
     {
         public int Id { get; set; }
@@ -64,5 +71,19 @@ namespace WebChat.Models
     {
         public string? Mail { get; set; }
         public string? PasswordHashed { get; set; }
+    }
+
+    public class ContactAdd
+    {
+        public int Id { get; set; }
+        [Required(ErrorMessage ="El contacto debe tener nombre")]
+        public string? Name { get; set; }
+        [Required(ErrorMessage ="Debe tener un numero de telefono")]
+        public string? PhoneNumber { get; set; }
+
+        public string? Mail { get; set; }
+        [Required(ErrorMessage = "Debe tener un Id de empresa")]
+        public int? BusinesId { get; set; }
+
     }
 }
